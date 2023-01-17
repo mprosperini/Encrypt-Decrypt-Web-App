@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Encriptador/Desencriptador Alura Challenge 1</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="reset.css">
+    
+    <!-- Font Family -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <script src="https://code.iconify.design/iconify-icon/1.0.2/iconify-icon.min.js"></script>
+    
+</head>
+
+<body class="container">
+    
+    <section class="sect-left"> 
+        
+        <img id="logo" src="img/Logo.svg" alt="alura-logo" >
+        
+        <textarea name="insert" id="input-area" cols="30" rows="20" placeholder="Ingrese el Texto Aqui"></textarea>
+                
+        <p class="note1">        
+            <iconify-icon id="icon"                  icon="bi:exclamation-circle-fill">
+            </iconify-icon> 
+        Solo letras minusculas y sin acentos
+        </p>
+        
+        <div class="buttons-container">
+            <input type="button" value="Encriptar" id="b1"  onclick="encrypt()">
+            <input type="button" value="Desencriptar" id="b2">
+        </div>
+        
+    </section>
+    
+    
+    <section class="sect-right">
+        
+        <div id="show-result1">
+            
+            <img id="munheco" src="img/munheco.svg" alt="character">
+
+            <div id="not-found-container">
+                
+                <p id="not-found-parag">Ningun mensaje fue encontrado</p>
+                
+                <p id="not-found-parag">Ingresa el texto que desees encriptar o desencriptar.</p>
+                
+            </div>
+            
+        </div>
+        
+        <div id="show-result2">
+            
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde in nostrum, impedit nesciunt, esse corporis odit atque explicabo numquam enim voluptatum ea dicta sit expedita illo doloribus. Ipsum, in perferendis.</p>
+            
+            <input id="sr2button" type="button" value="Copiar">
+            
+        </div>
+        
+    </section>
+    
+    
+    
+    
+    <script>
+        
+        function encrypt() {
+            document.getElementById("show-result1").style.display="none";
+            document.getElementById("show-result2").style.display="flex";
+        }
+        
+    </script>
+    
+</body>
+</html>
