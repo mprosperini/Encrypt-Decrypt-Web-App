@@ -5,8 +5,10 @@
     --color-section2:#fbbf24;
     --color1-button:#d97706;
     --color2-button:#b45309;
+    --color-button-hover:#EA580C;
     --color1-text: #000000;
     --color2-text:#000000;
+    --color-border:#000000;
     color-scheme:light;
     --transition: 0.2s ease-in-out;
 }
@@ -18,12 +20,13 @@
     --color-section2:#0f172a;
     --color1-button:#334155;
     --color2-button:#334155;
+    --color-button-hover:#609ED4;
     --color1-text: #f1f5f9;
     --color2-text:#f1f5f9;
     --color-border:#000000;
+    --color-black:#000000;
     color-scheme:dark;
 }
-
 
 * {
     box-sizing: border-box;
@@ -37,6 +40,8 @@ svg {
 body{
     background-color: var(--color-background);
 }
+
+/*---- ---- ---- ---- ---- ---- ----- HEADER ---- ---- ---- ---- ---- ---- ---- ---- */
 
 .header {
     margin: 0 5px;
@@ -81,9 +86,7 @@ body{
     cursor: pointer;
 }
 
-#sun-icon{
-    /* display: none; */
-}
+/*---- ---- ---- ---- ---- ---- ----- CONTAINER & SECT. LEFT ---- ---- ---- ---- ---- ---- ---- ---- */
 
 .container {
     background-color: var(--color-background);
@@ -117,7 +120,8 @@ body{
     /* font-size: 2rem; */
     font-size: clamp(1rem, 0.7778rem + 0.8889vw, 1.5rem);
     line-height: 150%;
-    color: #0A3871;
+    color: var(--color1-text);
+    padding: 10px 10px;
 }
 
 #input-area::placeholder {
@@ -183,8 +187,8 @@ body{
 }
 
 #b1:hover {
-    background: #609ED4;
-    color: #000000;
+    background: var(--color-button-hover);
+    color: var(--color-black);
     font-style: bold;
     font-size: 1.1875rem;
     transition: 0.1s;
@@ -192,13 +196,15 @@ body{
 }
 
 #b2:hover, #sr2button:hover {
-    background: #495057;
-    color: #FFFFFF;
+    background: var(--color-button-hover);
+    color: var(--color-black);
     font-style: bold;
     font-size: 1.1875rem;
     transition: 0.1s;
     cursor: pointer;
 }
+
+/*---- ---- ---- ---- ---- ---- ----- SECT. RIGHT ---- ---- ---- ---- ---- ---- ---- ---- */
 
 .sect-right {
     padding: 15px;
