@@ -195,7 +195,7 @@ body{
     cursor: pointer;
 }
 
-#b2:hover, #sr2button:hover {
+#b2:hover, #copy-button:hover {
     background: var(--color-button-hover);
     color: var(--color-black);
     font-style: bold;
@@ -204,7 +204,7 @@ body{
     cursor: pointer;
 }
 
-/*---- ---- ---- ---- ---- ---- ----- SECT. RIGHT ---- ---- ---- ---- ---- ---- ---- ---- */
+/*---- ---- ---- ---- ---- ---- ----- SECTION. RIGHT ---- ---- ---- ---- ---- ---- ---- ---- */
 
 .sect-right {
     padding: 15px;
@@ -267,7 +267,7 @@ body{
     background-color:var(--color-section1);
 }
 
-#show-result2 p{
+#encrypted-result{
     padding: 10px;
     /* Fonts */
     font-family: 'Inter';
@@ -280,11 +280,26 @@ body{
     background-color: var(--color-section1);
 }
 
+#encrypted-result::-moz-selection{
+    background-color: transparent;
+}
+
+#encrypted-result::selection{
+    background-color: transparent;
+}
+
+#just-to-posisionate-span-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+}
+
 #show-result2 input {
     align-self: center;
+    text-align: center;
     width: 40%;
     height: 67px;
-    margin: 32px;
     border: 1px solid var(--color-border);
     border-radius: 24px;
     /* Fonts */
@@ -294,122 +309,20 @@ body{
     /* font-size: 1rem; */
     font-size: clamp(0.8rem, 0.7111rem + 0.3556vw, 1rem);
     line-height: 19px;
-    text-align: center;
     color: var(--color1-text);
     background-color: var(--color1-button);
 }
 
-
-/* RESPONSIVE */
-/* @media (max-width:1273px) {
-    
-    .container {
-        align-content: center;
-        justify-content: center;
-        margin: 0 auto;
-        
-    }
-    
-    #input-area {
-        width: 600px;
-        left: 80px;
-    }
-    
-    .note{
-        left: 70px;
-    }
-    
-    .buttons-container {
-        left: 70px;
-    }
-    
-    .result-container {
-        width: 570px;
-        height: 600px;
-        left: 70px;
-        top: 600px;
-        position: relative;
-    }
-    
-    #munheco {
-        position: absolute;
-        top: -15%;
-        left: 17%;
-        right: 10%;
-    }
-    
-    #not-found-container{
-        position: absolute;
-        top: 50%;
-        left: 17%;
-        right: 10%;
-    }
-    
-} */
-
-/* RESPONSIVE TABLETS */
-/* @media (max-width:768px) { 
-    
-    #logo {
-        width: 31.09px;
-        height: 50.58px;
-        margin-top: 73.42px;
-        margin-left: 40px;
-    }  
-    
-    #logo2 {
-        width: 120px;
-        height: 40px;
-        margin-top: 2.77vh;
-        margin-left: 3.90vw;
-    }   
-    
-    #input-area {
-        width: 688px;
-        height: 288px;
-        margin-top: 240px;
-        margin-left: 40px;
-    }
-    
-    .note{
-        margin-top: 836px;
-        margin-left: 40px;
-    }
-    
-    .buttons-container {
-        width: 688px;
-        height: 67px;
-        margin-top: 870px;
-        margin-left: 40px;
-    }
-    
-    .result-container {
-        width: 688px;
-        height: 133px;
-        margin-top: 1001px;
-        margin-left: 40px;
-        border-radius: 32px;
-        
-        margin-bottom: 40px;
-    }
-    
-    #munheco {
-        display: none;
-    }
-    
-    #not-found-container{
-        width: 624px;
-        height: 69px;
-        margin: 32px;
-    }
-    
-    #not-found-parag {
-        width: 624px;
-        height: 29px;
-    }
-    
-    #not-found-parag:nth-child(2){
-        width: 624px;
-        height: 24px;
-    }
-}  */
+#copied-prompt{
+    align-self: center;
+    text-align: center;
+    line-height: 40px;
+    width: 100px;
+    height: 40px;
+    border-radius: 150px;
+    background-color: #65a30d;
+    border: 1px solid black;
+    opacity: 0%;
+    color: #000000;
+    transition: 500ms;
+}
