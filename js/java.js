@@ -18,7 +18,7 @@ function setUserTheme(newTheme) {
 }
 
 // ---- ---- ---- ---- ---- ---- ---- ---- ENCRYPT BUTTON ---- ---- ---- ---- ---- ----- ---- ----//
-let encryptKeys = [["a","ai"],["e","enter"],["i","imes"],["o","ober"],["u","ufat"]]
+let encryptKeys = [["e","enter"],["i","imes"], ["a","ai"],["o","ober"],["u","ufat"]];
 const encrypBtn = document.getElementById("encrypt-btn");
 let insertedText = document.getElementById("input-area");
 
@@ -28,10 +28,10 @@ encrypBtn.addEventListener("click",function(){
     
     for (let i = 0; i < encryptKeys.length; i++) {
         if (insertedText.value.includes(encryptKeys[i][0])) {
-            encryptedResult.textContent = insertedText.value.replaceAll(encryptKeys[i][0],encryptKeys[i][1]);
-        }        
+            insertedText.value = insertedText.value.replaceAll(encryptKeys[i][0],encryptKeys[i][1]);
+        }
+        encryptedResult.textContent = insertedText.value
     }
-    
     insertedText.value = "";
 })
 
@@ -42,9 +42,11 @@ decryptBtn.addEventListener("click",function(){
 
     for (let i = 0; i  < encryptKeys.length; i++) {
         if (encryptedResult.textContent.includes(encryptKeys[i][1])) {
-            insertedText.value = encryptedResult.textContent.replaceAll(encryptKeys[i][1],encryptKeys[i][0]);
+            encryptedResult.textContent = encryptedResult.textContent.replaceAll(encryptKeys[i][1],encryptKeys[i][0]);
         }
+        insertedText.value = encryptedResult.textContent;
     }
+    encryptedResult.textContent = "";
 })
 
 // ---- ---- ---- ---- ---- ---- ---- ---- COPY BUTTON + PROMPT ---- ---- ---- ---- ---- ----- ---- ----//
