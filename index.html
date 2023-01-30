@@ -6,6 +6,26 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Encrypt/Decrypt Program</title>
+    <!-- dark/light theme -->
+    <script>
+    const userTheme = localStorage.getItem("theme");
+    const darkQuery = window.matchMedia("(prefers-color-scheme: dark)");
+
+    if (userTheme === "dark" || (!userTheme && darkQuery.matches)) {
+        setTheme("dark");
+    };
+
+    // change theme with preference
+    darkQuery.addEventListener("change", function(e){
+        if (!localStorage.getItem("theme"))
+            setTheme(e.matches ? "dark" : "light");
+    });
+
+    function setTheme(newTheme) {
+        document.documentElement.setAttribute("data-theme",newTheme);
+    };
+    </script>
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="reset.css">
     <link rel="icon" href="img/Logo-square-white.ico">
@@ -67,9 +87,8 @@
             
             <div id="show-result2">
                 
-                
-                <p id="encrypted-result" ></p>
-                
+                <textarea name="" id="encrypted-result" cols="30" rows="20" placeholder=""></textarea>
+
                 <div id="just-to-posisionate-span-child">
                     
                     <input id="copy-button" type="button" value="Copiar">
@@ -83,15 +102,6 @@
             </div>
             
         </section>
-        
-        <script>
-            
-            function encrypt() {
-                document.getElementById("show-result1").style.display="none";
-                document.getElementById("show-result2").style.display="flex";
-            }
-            
-        </script>
         
     </div>
     
@@ -112,8 +122,6 @@
         <p>Designed by: MPC (2023) </p>
 
     </footer>
-    
-<div><p></p></div>
 
 </body>
 </html>
