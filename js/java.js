@@ -15,9 +15,17 @@ function setLightMode () {
 
 function setUserTheme(newTheme) {
     document.documentElement.setAttribute("data-theme",newTheme);
+    // save user preferences
+    localStorage.setItem("theme",newTheme);
+
 }
 
 // ---- ---- ---- ---- ---- ---- ---- ---- ENCRYPT BUTTON ---- ---- ---- ---- ---- ----- ---- ----//
+function encrypt() {
+    document.getElementById("show-result1").style.display="none";
+    document.getElementById("show-result2").style.display="flex";
+}
+
 let encryptKeys = [["e","enter"],["i","imes"], ["a","ai"],["o","ober"],["u","ufat"]];
 const encrypBtn = document.getElementById("encrypt-btn");
 let insertedText = document.getElementById("input-area");
@@ -54,9 +62,7 @@ let copyButton = document.getElementById("copy-button");
 let encryptedResult = document.getElementById("encrypted-result");
 
 copyButton.addEventListener("click",function() {
-    let selection = window.getSelection();
-    selection.selectAllChildren(encryptedResult);
-    document.execCommand("copy");
+    navigator.clipboard.writeText(encryptedResult.value);
 
     document.getElementById("copied-prompt").style.opacity="90%";
 
