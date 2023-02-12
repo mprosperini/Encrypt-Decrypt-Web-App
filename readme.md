@@ -33,7 +33,7 @@ To create this web site the following languages were used
 
 - CSS3 
 
-<img id="ll" src="/img/readme/javascript-original.svg" alt="drawng" />
+<img id="js-icon" src="/img/readme/javascript-original.svg" alt="java-script-icon" width="40" height="40" />
 
 <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-original-wordmark.svg" title="Java" alt="Java" width="40" height="40"/>&nbsp;
 
