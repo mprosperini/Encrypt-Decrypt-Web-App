@@ -1,14 +1,12 @@
 # Decrypt / Encrypt Web Page
 ![light-mode-img](/img/readme/light-web.png "light-mode")
 
-[TOCM]
+<!-- [TOCM]
 
-[TOC]
+[TOC] -->
 
 ## Introduction
 On this web page you'll be able to **Encrypt/Decrypt** text strings.
-
-This web site was 
 
 ---------------
 ## How it works?
@@ -35,11 +33,9 @@ Dark theme avaiable after pressing sun/moon icon
 ## Used Languages
 To create this web site the following languages were used
 
-- <img id="" src="/img/readme/html5-icon.svg" alt="html-icon" width="40" height="40" /> HTML5
-
-- <img id="" src="/img/readme/css3-icon.svg" alt="css-icon" width="40" height="40" /> CSS3 
-
-- <img id="js-icon" src="/img/readme/javascript-original.svg" alt="java-script-icon" width="40" height="40" /> JavaScript 
+- <img id="" src="/img/readme/html5-icon.svg" alt="html-icon" width="30" height="30" /> HTML5 
+- <img id="" src="/img/readme/css3-icon.svg" alt="css-icon" width="30" height="30" /> CSS3 
+- <img id="js-icon" src="/img/readme/javascript-original.svg" alt="java-script-icon" width="40" height="30" /> JavaScript 
 
 
 
