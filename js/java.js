@@ -26,7 +26,7 @@ function encrypt() {
     document.getElementById("show-result2").style.display="flex";
 }
 
-let encryptKeys = [["e","enter"],["i","imes"], ["a","ai"],["o","ober"],["u","ufat"]];
+let encryptKeys = [["e","enter"],["i","imer"], ["a","ai"],["o","ober"],["u","ufat"]];
 const encrypBtn = document.getElementById("encrypt-btn");
 let insertedText = document.getElementById("input-area");
 
